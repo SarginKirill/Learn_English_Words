@@ -1,0 +1,20 @@
+.word-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin: 40px 35px;
+}
+
+.word {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ccc;
+  transition: all 500ms;
+  min-width: 240px;
+}
+
+.word:hover {
+  border-bottom: 1px solid rgb(108, 107, 107);
+  cursor: default;
+}
