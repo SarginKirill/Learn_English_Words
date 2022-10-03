@@ -1,3 +1,5 @@
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css');
+
 .word-list {
   display: flex;
   flex-direction: row;
@@ -8,13 +10,39 @@
 }
 
 .word {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   padding-bottom: 5px;
   border-bottom: 1px solid #ccc;
   transition: all 500ms;
   min-width: 240px;
 }
+.word > p {
+  padding: 0;
+  margin: 0;
+}
+
+.gear {
+  color: #ccc;
+  transition: all 0.5s;
+}
+.gear:hover {
+  color: rgb(94, 104, 244);
+}
+
+.trash {
+  color: #ccc;
+  transition: all 0.5s;
+}
+.trash:hover {
+  color: rgb(233, 77, 77);
+}
 
 .word:hover {
   border-bottom: 1px solid rgb(108, 107, 107);
   cursor: default;
+}
+
+.change-word {
 }

@@ -14,6 +14,12 @@ const wordSlice = createSlice({
         return alert('Всі поля повинні бути заповнени')
       }
 
+      const exam = state.words.find(
+        (el) => el.textEng === action.payload.textEng.trim().toLowerCase()
+      )
+
+      if (exam) return alert('Ви вже вивчили це слово')
+
       state.words.push({
         id: new Date().toISOString(),
         textEng: action.payload.textEng.toLowerCase(),
@@ -23,9 +29,15 @@ const wordSlice = createSlice({
       localStorage.removeItem('words')
       localStorage.setItem('words', JSON.stringify(state.words))
     },
+    changeWord(state, action) {},
+    deleteWord(state, action) {
+      const data = state.words
+      console.log(action.payload)
+      console.log(data)
+    },
   },
 })
 
-export const { addWord } = wordSlice.actions
+export const { addWord, changeWord, deleteWord } = wordSlice.actions
 
 export default wordSlice.reducer
