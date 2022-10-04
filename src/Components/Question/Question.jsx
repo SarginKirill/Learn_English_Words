@@ -57,7 +57,12 @@ export function Question() {
     setQuestCounter(questCounter + 1)
   }
 
-  console.log(questCounter)
+  function repeat() {
+    setWords(getRandomWords)
+    setQuestCounter(0)
+    setScore(0)
+    setClose(false)
+  }
 
   useEffect(() => {
     setAnswers(getRandomAnswers())
@@ -85,6 +90,7 @@ export function Question() {
 
           <p className="h4">{(score / 10) * 100} %</p>
           <p>правільних відповідей</p>
+          <Button className="mt-4" text={'Повторити'} click={() => repeat()} />
         </>
       )}
     </div>

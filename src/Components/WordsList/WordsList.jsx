@@ -1,12 +1,9 @@
 import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { Link } from 'react-router-dom'
 import { deleteWord } from '../../Store/WordSlice'
 
 export function WordsList() {
   const words = useSelector((state) => state.words.words)
-
-  const [change, setChange] = useState(true)
 
   const dispatch = useDispatch()
 
@@ -27,7 +24,6 @@ export function WordsList() {
               <small className="text-muted">{word.textUkr}</small>
             </p>
             <div>
-              <i className="bi bi-gear gear mx-1"></i>
               <i
                 onClick={() => dispatch(deleteWord(word))}
                 className="bi bi-trash trash"
@@ -36,7 +32,6 @@ export function WordsList() {
           </div>
         ))}
       </div>
-      {/* <div className="change-word">Hello</div> */}
     </>
   )
 }

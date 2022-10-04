@@ -23,14 +23,6 @@
   margin: 0;
 }
 
-.gear {
-  color: #ccc;
-  transition: all 0.5s;
-}
-.gear:hover {
-  color: rgb(94, 104, 244);
-}
-
 .trash {
   color: #ccc;
   transition: all 0.5s;
@@ -42,7 +34,4 @@
 .word:hover {
   border-bottom: 1px solid rgb(108, 107, 107);
   cursor: default;
-}
-
-.change-word {
 }
