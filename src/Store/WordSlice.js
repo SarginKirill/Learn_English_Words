@@ -30,14 +30,10 @@ const wordSlice = createSlice({
       localStorage.setItem('words', JSON.stringify(state.words))
     },
     deleteWord(state, action) {
-      // state.words = state.words.filter((word) => word.id !== action.payload.id)
+      state.words = state.words.filter((word) => word.id !== action.payload.id)
 
-      // localStorage.removeItem('words')
-      // localStorage.setItem('words', JSON.stringify(state.words))
-
-      const data = state.words[0]
-
-      console.log(data)
+      localStorage.removeItem('words')
+      localStorage.setItem('words', JSON.stringify(state.words))
     },
   },
 })
